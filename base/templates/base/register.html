@@ -1,0 +1,31 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+  <h1>Register</h1>
+</div>
+
+<div class="card-body">
+  <form method="POST">
+    {% csrf_token %}
+    <label class="registration-input">
+      {{form.username.label}}
+      {{form.username}}
+    </label>
+
+    <label class="registration-input">
+      {{form.password1.label}}
+      {{form.password1}}
+    </label>
+
+    <label class="registration-input">
+      {{form.password2.label}}
+      {{form.password2}}
+    </label>
+    <button class="btn btn_reg" type="submit" value="">
+      Register
+    </button>
+  </form>
+</div>
+
+{% endblock content %}
